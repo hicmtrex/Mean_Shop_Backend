@@ -114,9 +114,7 @@ export const deleteOrder = asyncHandler(async (req: Request, res: Response) => {
 });
 
 //payment
-const key: string | undefined =
-  process.env.STRIPE_SECRET_KEY ||
-  'sk_test_51KesRYH5cYomygyIffw08jlDMHy9ho25A2libjahdd0vIHGIrJJerzdJqztgKEPob11mgu4F4bUFVY4AaMmY0qBE006wASQ6SX';
+const key: string | undefined = process.env.STRIPE_SECRET_KEY || '';
 
 const stripe = new Stripe(key, {
   apiVersion: '2022-11-15',
